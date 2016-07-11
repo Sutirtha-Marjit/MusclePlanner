@@ -1,0 +1,26 @@
+<!doctype>
+<html ng-app="muscleapp">
+
+<head>
+    <title>Muscle Planner 1.0.0</title>
+</head>
+<link href="resources/bootstrap.min.css" type="text/css" rel="stylesheet"/>  
+<link href="resources/basestyle.css" type="text/css" rel="stylesheet"/>      
+<script type="text/javascript" src="resources/angular.min.js"></script>
+<script type="text/javascript">var muscleapp = angular.module('muscleapp',[]); </script>    
+<script type="text/javascript" src="resources/master.ctrl.js"></script>    
+<body>
+<div class="rootPacket" ng-controller="master">
+   <header>
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-8"><h1>{{appHeading}}</h1></div>
+            <div class="col-xs-4"><h3>{{currentUser}}</h3></div>
+        </div>  
+      </div>
+    </header>
+</div>    
+    
+
+</body>
+</html>
