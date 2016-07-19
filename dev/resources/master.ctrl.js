@@ -1,6 +1,8 @@
 var masterController = function ($scope) {
+    
     $scope.appHeading = "Muscle Planner";
     $scope.currentUser = 'Sutirtha';
+    $scope.appNavigation = [];
     $scope.appSchema = {
         user: [['Sutirtha', 'vxt@1234'], ['Susmita', 'vxt@1234']],
         workdoutdb: {

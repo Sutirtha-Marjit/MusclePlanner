@@ -1,34 +1,68 @@
-html,body{
-    padding: 0px;
-    margin:0px;
-    background:#212123;
+.bgBlue{
+    background:rgba(0,161,242,1); 
 }
-*{
-    color:white;
-    -webkit-font-smoothing:antialiased;
-    -moz-font-smoothing:antialiased;
-    font-smoothing:antialiased;
+
+.bgBlack{
+    background:black;
+}
+
+.fitnessMaleBg{
+    background-image:url(images/b1.jpg);
+    background-size: 100% auto;
+    background-blend-mode: luminosity;
+    background-repeat:no-repeat;
+    background-position: center 50px;
+}
+
+.fitnessFemaleBg{
+    background-image:url(images/b2.jpg);
+    background-size: 100% auto;
+    background-blend-mode: luminosity;
+    background-repeat:no-repeat;
+    background-position: center 50px;
+}
+.navPacket{
+    background: white;
+    padding: 15px;
+    width: 100%;
+    height: 50px;
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.10);
+    -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.10);
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.10);
+    position: fixed;
+    left:0;
+    top:0;
+}
+
+.navPacket h1,.navPacket h2, .navPacket h3, .navPacket h4{
+    margin: 0px;
+    padding: 0px;
+}
+
+.pageBack{
+    transition: all 0.5s;
+    width: 100%;
+}
+
+.pageBack .page{
     
 }
 
-.rootPacket{
-    background:#212123;
+.page{
+    height: 100%;
+    padding-top:60px;
 }
 
-header{
-background: #c745fe;
-background: -moz-linear-gradient(-45deg,  #c745fe 0%, #5855de 100%);
-background: -webkit-linear-gradient(-45deg,  #c745fe 0%,#5855de 100%);
-background: linear-gradient(135deg,  #c745fe 0%,#5855de 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c745fe', endColorstr='#5855de',GradientType=1 );
-
+.darkTheme *{
+    color:white;
+}
+.fitnessFemaleBg .bgBlack,
+.fitnessMaleBg .bgBlack{
+    background: rgba(0,0,0,0.6);
 }
 
-header h1,h3{
-    padding:0px;
-    margin:0px;
-}
-
-header h1{
-  padding:15px;  
+@media screen and (max-width:500px){
+   .fitnessMaleBg{
+     background-size: auto 100%;  
+    }
 }

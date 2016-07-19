@@ -3,24 +3,64 @@
 
 <head>
     <title>Muscle Planner 1.0.0</title>
+    <meta name="viewport" content="target-densitydpi=device-dpi, initial-scale=1.0, user-scalable=no" />
 </head>
+<link href="resources/basestyle.css" type="text/css" rel="stylesheet"/>
 <link href="resources/bootstrap.min.css" type="text/css" rel="stylesheet"/>  
-<link href="resources/basestyle.css" type="text/css" rel="stylesheet"/>      
 <script type="text/javascript" src="resources/angular.min.js"></script>
 <script type="text/javascript">var muscleapp = angular.module('muscleapp',[]); </script>    
 <script type="text/javascript" src="resources/master.ctrl.js"></script>    
 <body>
-<div class="rootPacket" ng-controller="master">
-   <header>
-      <div class="container-fluid">
-        <div class="row">
-            <div class="col-xs-8"><h1>{{appHeading}}</h1></div>
-            <div class="col-xs-4"><h3>{{currentUser}}</h3></div>
-        </div>  
-      </div>
-    </header>
-</div>    
+   
+<div class="masterAppPacket">    
+    <div class="navPacket">
+        <h3>Appname</h3>
+    </div>
+    <div class="pagePacket bgBlack fitnessMaleBg">
+        <div class="pageBack">
+            
+            <!-- PAGE:Intro :start-->
+            <div class="page darkTheme bgBlack">
+                 <div class="container-fluid">
+                     <div style="margin-top:40%;">
+                     <h1 style="text-align:center">Muscle planner</h1>
+                     <p style="text-align:center">
+                     Welcome to muscleplanner, where you can keep your daily achievement record. Please selct a user to get inside the app.
+                     </p>
+                     <a class="btn btn-success btn-block">Sutirtha</a>
+                     <a class="btn btn-success btn-block">Susmita</a>
+                    </div>
+                 </div>         
+                
+            </div>
+            <!-- PAGE:Intro :end-->
+            
+            <!-- PAGE:LOGIN :start-->
+            <div class="page darkTheme bgBlack ng-hide">
+                <div class="container-fluid">
+                    <form>
+                      <div class="form-group">
+                     <h3 class="text-info">Welcome Sutirtha</h3>      
+                      <p>      
+                      Welcome Sutirtha to the environment of workout achievement tracking. Please login to record your todays achievement.
+                     </p>      
+                      </div>      
+                           
+                      <div class="form-group">
+                        <label for="loginpassword">Sutirtha Marjit</label>
+                        <input type="password" class="form-control" id="loginpassword" placeholder="password">
+                      </div>
+                      <div class="form-group">
+                      <a class="btn btn-info btn-block">Login</a>
+                      </div>      
+                    </form>    
+                </div>
+            </div>
+            <!-- PAGE:LOGIN :end-->
+            
+        </div>    
+    </div>
     
-
+</div>
 </body>
 </html>
