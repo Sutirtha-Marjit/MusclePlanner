@@ -10,6 +10,6 @@ childProcess.execSync(npmInstall,{cwd:frontEndFolderPath,env:process.env,stdio:'
 
 
 childProcess.execSync(webappBuild,{cwd:frontEndFolderPath,env:process.env,stdio:'inherit'});
-childProcess.execSync(npmInstall,{cwd:root,env:process.env,stdio:'inherit'});
+//childProcess.execSync(npmInstall,{cwd:root,env:process.env,stdio:'inherit'});
 console.log('test04-2');
 startApp();
