@@ -1,0 +1,23 @@
+{
+  "name": "muscleplanner",
+  "version": "1.0.0",
+  "description": "MusclePlanner",
+  "main": "master.build.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node master.build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sutirtha-Marjit/MusclePlanner.git"
+  },
+  "author": "sutirtha.social.marjit@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sutirtha-Marjit/MusclePlanner/issues"
+  },
+  "homepage": "https://github.com/Sutirtha-Marjit/MusclePlanner#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
