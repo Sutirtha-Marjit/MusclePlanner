@@ -11,6 +11,5 @@ console.log('FrontEnd dependency installation:End');
 console.log('FrontEnd build :started');
 childProcess.execSync(webappBuild,{cwd:frontEndFolderPath,env:process.env,stdio:'inherit'});
 console.log('FrontEnd build :end');
-//childProcess.execSync(npmInstall,{cwd:root,env:process.env,stdio:'inherit'});
-console.log('test05');
+
 startApp();
