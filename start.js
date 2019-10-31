@@ -3,7 +3,10 @@ const app = express();
 const localport = 8082;
 
 const APP = ()=>{
-  app.use(express.static('./frontend/webapp/build/'));
+  app.get('/',(req,res)=>{
+    res.send('ok');
+  })
+  //app.use(express.static('./frontend/webapp/build/'));
   app.set('port',process.env.PORT || localport);
 
   app.listen(app.get('port'),()=>{
