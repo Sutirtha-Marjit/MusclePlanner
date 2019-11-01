@@ -5,7 +5,7 @@ const HtmlWebpackTagsPlugin = require('html-webpack-tags-plugin');
 const bootstrapCSSURL= 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css';
 
 const dynamicHTMLGenerator = new HtmlWebpackPlugin({
-    title: 'Web Application',
+    title: 'Muscle Planner',
     minify: true,
     favicon:path.resolve(__dirname,'./webapp/source/images/icon.png'),
     template:path.resolve(__dirname,'./webapp/source/index.html')
