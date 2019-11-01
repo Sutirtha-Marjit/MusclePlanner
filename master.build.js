@@ -4,12 +4,16 @@ const npmInstall = 'npm install';
 const webappBuild = 'npm run build';
 const childProcess = require('child_process');
 const root = "./";
+const install = false;
 
-console.log('FrontEnd dependency installation:Started');
-childProcess.execSync(npmInstall,{cwd:frontEndFolderPath,env:process.env,stdio:'inherit'});
-console.log('FrontEnd dependency installation:End');
-console.log('FrontEnd build :started');
-childProcess.execSync(webappBuild,{cwd:frontEndFolderPath,env:process.env,stdio:'inherit'});
-console.log('FrontEnd build :end');
+if(install){
+    console.log('FrontEnd dependency installation:Started');
+    childProcess.execSync(npmInstall,{cwd:frontEndFolderPath,env:process.env,stdio:'inherit'});
+    console.log('FrontEnd dependency installation:End');
+    console.log('FrontEnd build :started');
+    childProcess.execSync(webappBuild,{cwd:frontEndFolderPath,env:process.env,stdio:'inherit'});
+    console.log('FrontEnd build :end');
+}
+
 
 startApp();

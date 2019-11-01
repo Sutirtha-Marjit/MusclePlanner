@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Sutirtha-Marjit/MusclePlanner#readme",
   "dependencies": {
+    "convert-excel-to-json": "^1.6.1",
     "express": "^4.17.1"
   }
 }
