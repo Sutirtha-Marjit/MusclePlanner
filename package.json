@@ -5,7 +5,8 @@
   "main": "master.build.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node master.build.js"
+    "start": "node master.build.js",
+    "dev":"nodemon master.build.js"
   },
   "repository": {
     "type": "git",
