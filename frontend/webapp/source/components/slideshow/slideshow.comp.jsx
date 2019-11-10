@@ -9,13 +9,30 @@ export class SlideShow extends React.Component{
         this.count=0;
         this.delay=6500;
         this.state = {
-            selection:0
+            selection:0,
+            baseClass:'landscape'
         };
+        
+    }
+
+    eventBind(){
+        
+        const fn = ()=>{
+            const h = window.outerHeight;
+            const w = window.outerWidth;
+
+            let baseClass = (h>w) ? 'potrait' : 'landscape';
+            this.setState({baseClass:baseClass});
+        }
+
+        window.onresize = fn;
+        window.onorientationchange = fn;
         
     }
 
     componentDidMount(){
         this.clockStrat();
+        this.eventBind();
     }
 
     clockStrat(){
@@ -37,7 +54,7 @@ export class SlideShow extends React.Component{
         if(this.props.slides && this.props.slides.length){
             this.props.slides.forEach((element,i) => {
                 let op=0;
-                let scale=1.5;
+                let scale=1.1;
                 if(i===this.state.selection){op=1;scale=1;}
                 const styleObj = {
                     backgroundImage:`url("${element}")`,
@@ -58,8 +75,8 @@ export class SlideShow extends React.Component{
 
     render(){
 
-
-        const slideshowContent = <div className="slideshow-container">
+        const wrapClass = `slideshow-container ${this.state.baseClass}`;
+        const slideshowContent = <div className={wrapClass}>
             <div className="slideshow-pack">
                 {this.getSlides()}
             </div>
