@@ -58,7 +58,6 @@ export class SlideShow extends React.Component{
                 if(i===this.state.selection){op=1;scale=1;}
                 const styleObj = {
                     backgroundImage:`url("${element}")`,
-                    backgroundPosition:`center center`,
                     backgroundRepeat:'no-repeat',
                     opacity:op,
                     transform:`scale(${scale})`

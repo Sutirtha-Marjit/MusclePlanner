@@ -43,7 +43,7 @@ const WebpackConfig = {
         extensions: ['.jsx', '.ts', '.js'],
     },
     plugins: [
-        new CleanWebpackPlugin(),
+        //new CleanWebpackPlugin(),
         dynamicHTMLGenerator,
         additionalCSS,
         copyPlugin

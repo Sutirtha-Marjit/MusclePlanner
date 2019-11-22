@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {SlideShow} from './components/slideshow/slideshow.comp';
 import {Login} from './components/login/login.comp';
+import {AppHeader} from './components/app-header/appheader'
 
 export class Application extends React.Component{
     constructor(props){
@@ -21,11 +22,12 @@ export class Application extends React.Component{
         
         const slides = [];
         const rootTSX = 
-        <div>
+        <div className="innerWrapper">
         
         <SlideShow slides={this.generateSlides()}></SlideShow>
+        <AppHeader></AppHeader>
         <div className="mainContent">
-        <header className="brand-logo">MusclePlanner</header>
+        
         <Login></Login>
         </div>
         

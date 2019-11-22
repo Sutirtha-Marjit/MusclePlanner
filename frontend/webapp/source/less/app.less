@@ -1,19 +1,44 @@
 //font-family: 'Anton', sans-serif;
 //font-family: 'Barlow Condensed', sans-serif;
+@import './variables.less';
 body *{
     font-family: 'Barlow Condensed', sans-serif;
 }
-.brand-logo{
+
+body,html{
+    height: 100% !important;
+}
+
+body{
+    .wrapper,.innerWrapper{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        top:0px;
+        left:0px;
+        margin:0px;
+        padding:0px;
+    }
+}
+.brand-header{
     font-family: 'Anton', sans-serif;
-    font-size:30px; 
     padding:20px 10px;
     letter-spacing: 0.05rem;
-    text-align:center;
     color:rgba(255,255,255,1);
+    position: fixed;
+    top:0px;
+    left:0px;
+    border-bottom:1px solid rgba(255,255,255,0.3);
+    width: 100%;
+    height:@headerHeight;
+    overflow: hidden;
 }
 
 .mainContent{
+    top:@headerHeight;
     position: relative;
+    position: relative;
+    height: calc(100% - @headerHeight);
 }
 
 .full-width-image{
