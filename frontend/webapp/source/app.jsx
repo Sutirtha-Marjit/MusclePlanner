@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {SlideShow} from './components/slideshow/slideshow.comp';
+import {Login} from './components/login/login.comp';
 
 export class Application extends React.Component{
     constructor(props){
@@ -19,14 +20,13 @@ export class Application extends React.Component{
     render(){
         
         const slides = [];
-
-
         const rootTSX = 
         <div>
         
         <SlideShow slides={this.generateSlides()}></SlideShow>
         <div className="mainContent">
         <header className="brand-logo">MusclePlanner</header>
+        <Login></Login>
         </div>
         
         </div>;
