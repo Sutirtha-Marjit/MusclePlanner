@@ -32,6 +32,10 @@ body{
     width: 100%;
     height:@headerHeight;
     overflow: hidden;
+
+    h3{
+        font-family: 'Anton', sans-serif;        
+    }
 }
 
 .mainContent{
@@ -60,5 +64,22 @@ input{
     }
     
 }
+
+.appear-slide-up{
+    animation:appear-slide-up 0.5s ease-out;
+   
+    
+}
+
+@keyframes appear-slide-up {
+    from {
+        opacity: 0;
+        transform:translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform:translateY(0px);
+    }
+}  
 
 @import 'slideshow.less';
