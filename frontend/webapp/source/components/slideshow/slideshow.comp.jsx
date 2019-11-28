@@ -8,6 +8,9 @@ export class SlideShow extends React.Component{
         this.showID=0;
         this.count=0;
         this.delay=6500;
+        this.styleObj={
+            background:this.getGradient()
+        };
         this.state = {
             selection:0,
             baseClass:'landscape'
@@ -28,6 +31,26 @@ export class SlideShow extends React.Component{
         window.onresize = fn;
         window.onorientationchange = fn;
         
+    }
+
+    getGradientConfig(){
+        const colors = [
+            {start:'#bf04db',stop:'##e14310'},
+            {start:'#189add',stop:'#34a203'},
+            {start:'#ed1159',stop:'#8f08c7'},
+            {start:'#14c74a',stop:'#177aa8'},
+        ]
+        const randomNumber = (min, max)=>{  
+            return Math.floor(Math.random() * (max - min) + min); 
+        }; 
+        const r = randomNumber(0,colors.length-1);
+        console.log(r);
+        return colors[randomNumber(0,colors.length-1)];
+    }
+
+    getGradient(){
+        const grd = this.getGradientConfig();
+        return `linear-gradient(0deg, ${grd.start}, ${grd.stop})`;
     }
 
     componentDidMount(){
@@ -75,7 +98,7 @@ export class SlideShow extends React.Component{
     render(){
 
         const wrapClass = `slideshow-container ${this.state.baseClass}`;
-        const slideshowContent = <div className={wrapClass}>
+        const slideshowContent = <div className={wrapClass} style={this.styleObj}>
             <div className="slideshow-pack">
                 {this.getSlides()}
             </div>
