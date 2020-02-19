@@ -36,6 +36,7 @@ export function AppRouting() {
     const routerJSX = <div>
 
         <Router>
+            <aside className="sidepanel bg-dark">
             <div className="container-fluid">
                 <br />
                 <div className="btn-group">
@@ -45,12 +46,14 @@ export function AppRouting() {
                 </div>
                 <hr />
             </div>
+            </aside>
             <Switch>
                 <div className="container-fluid">
                     <Route path="/pages/:comp" children={<StaticPages />}></Route>
                     <Route path="/welcome" children={getHome()}></Route>
                 </div>
             </Switch>
+            
         </Router>
     </div>;
 

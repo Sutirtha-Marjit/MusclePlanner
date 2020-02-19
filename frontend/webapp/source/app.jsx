@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { SlideShow } from './components/slideshow/slideshow.comp';
-import { Login } from './components/login/login.comp';
 import { AppRouting } from './components/app-routing/menu.comp';
 import { AppHeader } from './components/app-header/appheader'
+import { masterReducer, getInitialState } from './statemgnt/reducers';
 
 export class Application extends React.Component {
     constructor(props) {
@@ -12,7 +12,7 @@ export class Application extends React.Component {
 
     generateSlides() {
         const slides = [];
-        for (let i = 1; i < 8; i++) {
+        for (let i = 1; i < 9; i++) {
             slides.push(`./images/slides/PIC000${i}.jpg`);
         }
 
@@ -21,15 +21,15 @@ export class Application extends React.Component {
 
     render() {
 
-        const slides = [];
         const rootTSX =
             <div className="innerWrapper">
 
                 <SlideShow slides={this.generateSlides()}></SlideShow>
                 <AppHeader></AppHeader>
                 <div className="mainContent">                    
-                    <AppRouting></AppRouting>
+                <AppRouting></AppRouting>
                 </div>
+                
 
             </div>;
 

@@ -39,12 +39,12 @@ export class SlideShow extends React.Component{
             {start:'#189add',stop:'#34a203'},
             {start:'#ed1159',stop:'#8f08c7'},
             {start:'#14c74a',stop:'#177aa8'},
+            {start:'#cecece',stop:'#828282'},
         ]
         const randomNumber = (min, max)=>{  
             return Math.floor(Math.random() * (max - min) + min); 
         }; 
         const r = randomNumber(0,colors.length-1);
-        console.log(r);
         return colors[randomNumber(0,colors.length-1)];
     }
 

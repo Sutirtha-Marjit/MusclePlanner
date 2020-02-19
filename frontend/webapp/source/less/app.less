@@ -34,8 +34,24 @@ body{
     overflow: hidden;
 
     h3{
-        font-family: 'Anton', sans-serif;        
+        font-family: 'Anton', sans-serif;   
+        display:inline-block;
+        width: ~"calc(100% - 30px)";     
     }
+}
+
+.clickable{
+    cursor: pointer;
+}
+
+.sidepanel{
+    position: fixed;
+    top:0px;
+    right:0px;
+    width: 50%;
+    height: 100%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
 }
 
 .mainContent{
@@ -83,3 +99,4 @@ input{
 }  
 
 @import 'slideshow.less';
+@import 'icon.less';
